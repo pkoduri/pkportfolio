@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.K. Koduri - Medical Device Marketing Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'professional': {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a'
+                        },
+                        'disruptor': {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            900: '#831843'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'pulse-subtle': 'pulseSubtle 2s infinite',
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pulseSubtle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        .theme-transition {
+            transition: all 0.5s ease-in-out;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-inter antialiased theme-transition" id="mainBody">
+
+<!-- @COMPONENT: Navigation [Fixed header with theme toggle] -->
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 theme-transition" id="navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <span class="text-xl font-bold text-gray-900" data-bind="user.name">P.K. Koduri</span>
+                <span class="ml-2 text-sm text-gray-500">Medical Device Marketing Leader</span>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <a href="#about" class="text-gray-700 hover:text-professional-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                    <a href="#achievements" class="text-gray-700 hover:text-professional-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Achievements</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-professional-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+                    <a href="#contact" class="text-gray-700 hover:text-professional-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                </div>
+            </div>
+            <!-- Theme Toggle Button -->
+            <button id="themeToggle" class="hidden lg:block bg-gray-100 hover:bg-gray-200 p-2 rounded-lg transition-colors">
+                <i class="fas fa-palette text-gray-600"></i>
+            </button>
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button class="bg-gray-100 p-2 rounded-md">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- @END_COMPONENT: Navigation -->
+
+<!-- @COMPONENT: ThemeSelector [Choice-driven landing section] -->
+<section class="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-white flex items-center justify-center" id="themeSelector">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center mb-16 animate-fade-in">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                Choose Your <span class="bg-gradient-to-r from-professional-600 to-disruptor-600 bg-clip-text text-transparent">Perspective</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Experience P.K. Koduri's achievements through two lenses: traditional clinical excellence or transformative innovation leadership.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Professional Theme Card -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 card-hover cursor-pointer" id="professionalChoice">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-professional-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-stethoscope text-2xl text-professional-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Clinical Excellence</h3>
+                    <p class="text-gray-600 mb-6">
+                        "I believe that breakthrough medical technologies should reach every patient who needs them"
+                    </p>
+                    <div class="space-y-3 text-sm text-gray-500">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-check-circle text-professional-600 mr-2"></i>
+                            <span>95.5% Success Rate</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-check-circle text-professional-600 mr-2"></i>
+                            <span>$250M+ Portfolio</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-check-circle text-professional-600 mr-2"></i>
+                            <span>Global Expansion</span>
+                        </div>
+                    </div>
+                    <button class="mt-6 bg-professional-600 text-white px-6 py-3 rounded-lg hover:bg-professional-700 transition-colors w-full font-medium">
+                        View Clinical Journey
+                    </button>
+                </div>
+            </div>
+
+            <!-- Disruptor Theme Card -->
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-2xl shadow-lg card-hover cursor-pointer text-white" id="disruptorChoice">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-disruptor-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rocket text-2xl text-disruptor-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Innovation Catalyst</h3>
+                    <p class="text-gray-300 mb-6">
+                        "Medical device companies lose their innovation edge one bureaucratic layer at a time"
+                    </p>
+                    <div class="space-y-3 text-sm text-gray-400">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-bolt text-disruptor-400 mr-2"></i>
+                            <span>5 Days vs 90-Day Cycles</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-bolt text-disruptor-400 mr-2"></i>
+                            <span>Cross-Silo Integration</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-bolt text-disruptor-400 mr-2"></i>
+                            <span>Agile Transformation</span>
+                        </div>
+                    </div>
+                    <button class="mt-6 bg-disruptor-600 text-white px-6 py-3 rounded-lg hover:bg-disruptor-700 transition-colors w-full font-medium">
+                        View Innovation Journey
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <button id="skipThemeSelector" class="text-gray-500 hover:text-gray-700 text-sm underline">
+                Skip and view full portfolio
+            </button>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: ThemeSelector -->
+
+<!-- @COMPONENT: MainPortfolio [Hidden initially, shown after theme selection] -->
+<div id="mainPortfolio" class="hidden">
+
+    <!-- Hero Section -->
+    <section class="pt-16 pb-20 theme-transition" id="heroSection">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-up">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-professional-100 text-professional-700 px-3 py-1 rounded-full text-sm font-medium" id="heroBadge">
+                            Medical Device Marketing Expert
+                        </span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6" id="heroTitle">
+                        Transforming Medical Technology into Patient Success
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8" id="heroSubtitle">
+                        15+ years driving breakthrough medical device adoption, from FDA-approved innovations to global market expansion.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-professional-600 text-white px-8 py-3 rounded-lg hover:bg-professional-700 transition-colors font-medium">
+                            View Case Studies
+                        </button>
+                        <button class="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">
+                            <i class="fas fa-download mr-2"></i>
+                            Download Resume
+                        </button>
+                    </div>
+                </div>
+                <div class="animate-slide-up">
+                    <!-- Professional headshot placeholder -->
+                    <!-- A professional headshot of a marketing executive in business attire -->
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=600" alt="P.K. Koduri Professional Headshot" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-50 theme-transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="animate-fade-in">
+                    <div class="text-3xl md:text-4xl font-bold text-professional-600 mb-2">15+</div>
+                    <div class="text-gray-600">Years Experience</div>
+                </div>
+                <div class="animate-fade-in">
+                    <div class="text-3xl md:text-4xl font-bold text-professional-600 mb-2">$250M+</div>
+                    <div class="text-gray-600">Portfolio Value</div>
+                </div>
+                <div class="animate-fade-in">
+                    <div class="text-3xl md:text-4xl font-bold text-professional-600 mb-2">95.5%</div>
+                    <div class="text-gray-600">Success Rate</div>
+                </div>
+                <div class="animate-fade-in">
+                    <div class="text-3xl md:text-4xl font-bold text-professional-600 mb-2">Global</div>
+                    <div class="text-gray-600">Market Reach</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 theme-transition" id="about">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">About P.K. Koduri</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A proven leader in medical device marketing with a track record of transforming innovative technologies into life-saving patient solutions.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="mb-6">
+                            As an accomplished medical device marketing professional, I have built my career on developing and executing effective go-to-market strategies for innovative products that improve patient outcomes worldwide.
+                        </p>
+                        <p class="mb-6">
+                            My approach combines deep clinical understanding with cutting-edge marketing methodologies, enabling me to bridge the gap between complex medical technologies and the healthcare professionals who use them.
+                        </p>
+                        <p>
+                            From launching the first FDA-approved fenestrated abdominal endograft to implementing agile marketing practices across global divisions, I focus on delivering measurable results that advance both business objectives and patient care.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                        <div class="w-12 h-12 bg-professional-100 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-graduation-cap text-professional-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Education</h4>
+                        <p class="text-sm text-gray-600">MBA Marketing & Strategy, Indiana University Kelley School</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                        <div class="w-12 h-12 bg-professional-100 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-briefcase text-professional-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Experience</h4>
+                        <p class="text-sm text-gray-600">Cook Medical, Lexmark International, Multiple Startups</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                        <div class="w-12 h-12 bg-professional-100 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-award text-professional-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Expertise</h4>
+                        <p class="text-sm text-gray-600">Product Launch, Strategic Marketing, Global Expansion</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                        <div class="w-12 h-12 bg-professional-100 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-globe text-professional-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Impact</h4>
+                        <p class="text-sm text-gray-600">Worldwide patient outcomes improvement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-20 bg-gray-50 theme-transition" id="achievements">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Key Achievements</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Milestone accomplishments that demonstrate measurable impact on patient care and business growth.
+                </p>
+            </div>
+
+            <!-- Interactive Timeline -->
+            <div class="relative">
+                <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-professional-200"></div>
+                
+                <!-- Timeline Item 1 -->
+                <div class="relative flex items-center mb-12">
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-professional-600 rounded-full border-4 border-white shadow-lg"></div>
+                    <div class="md:hidden absolute left-4 transform -translate-x-1/2 w-4 h-4 bg-professional-600 rounded-full border-4 border-white shadow-lg"></div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-professional-100 text-professional-700 px-3 py-1 rounded-full text-sm font-medium">2012-2020</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Zenith Fenestrated Program Leadership</h3>
+                            <p class="text-gray-600 mb-4">
+                                Led the successful launch and global expansion of the first FDA-approved fenestrated abdominal endograft, achieving 95.5% success rate and training 90+ medical centers.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">FDA Launch</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Physician Training</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Global Expansion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative flex items-center mb-12">
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-professional-600 rounded-full border-4 border-white shadow-lg"></div>
+                    <div class="md:hidden absolute left-4 transform -translate-x-1/2 w-4 h-4 bg-professional-600 rounded-full border-4 border-white shadow-lg"></div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:pl-8 md:ml-auto">
+                        <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-professional-100 text-professional-700 px-3 py-1 rounded-full text-sm font-medium">2017-2018</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">$250M+ Portfolio Management</h3>
+                            <p class="text-gray-600 mb-4">
+                                Managed global marketing mix for abdominal and visceral endografts, achieving high single-digit market share growth across regional markets.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Portfolio Growth</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Market Share</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Global Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative flex items-center mb-12">
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-professional-600 rounded-full border-4 border-white shadow-lg"></div>
+                    <div class="md:hidden absolute left-4 transform -translate-x-1/2 w-4 h-4 bg-professional-600 rounded-full border-4 border-white shadow-lg"></div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-professional-100 text-professional-700 px-3 py-1 rounded-full text-sm font-medium">2021-2025</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Agile Marketing Transformation</h3>
+                            <p class="text-gray-600 mb-4">
+                                Introduced design sprints and agile methodologies across MedSurg and Vascular divisions, reducing project cycles from 90 days to 5 days.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Design Sprints</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Process Innovation</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Cross-Division</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="py-20 theme-transition" id="portfolio">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Portfolio Highlights</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Deep-dive case studies showcasing strategic thinking, execution excellence, and measurable outcomes.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case Study 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <!-- Medical device innovation in a modern laboratory setting -->
+                    <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="Medical device innovation" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-professional-100 text-professional-700 px-3 py-1 rounded-full text-sm font-medium">Product Launch</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Zenith Fenestrated Launch Strategy</h3>
+                        <p class="text-gray-600 mb-4">
+                            Comprehensive analysis of the groundbreaking FDA launch that established new standards for complex AAA treatment.
+                        </p>
+                        <button class="text-professional-600 hover:text-professional-700 font-medium">
+                            Read Case Study <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <!-- Advanced endoscopy equipment in a medical procedure room -->
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="Endoscopy equipment" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-disruptor-100 text-disruptor-700 px-3 py-1 rounded-full text-sm font-medium">Innovation</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">TeslaTome Market Entry</h3>
+                        <p class="text-gray-600 mb-4">
+                            How design sprints and agile methodology accelerated the go-to-market timeline for a revolutionary ERCP platform.
+                        </p>
+                        <button class="text-professional-600 hover:text-professional-700 font-medium">
+                            Read Case Study <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <!-- Global healthcare collaboration and telemedicine -->
+                    <img src="https://pixabay.com/get/g170c82fa1348815e49eefb968c6ef5f21b2922a130bf449ca7bd63c78a61962de187da5964f0652b60ba50723eae57410ed70f381558a2b893515cef3877101e_1280.jpg" alt="Global healthcare collaboration" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Global Expansion</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Global Market Penetration</h3>
+                        <p class="text-gray-600 mb-4">
+                            Strategic framework for expanding complex medical devices across European, Canadian, and APAC markets.
+                        </p>
+                        <button class="text-professional-600 hover:text-professional-700 font-medium">
+                            Read Case Study <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Downloadable Resources Section -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Downloadable Resources</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-file-pdf text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Complete Resume</h4>
+                                <p class="text-sm text-gray-600">Detailed CV with full experience</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-download mr-2"></i>Download PDF
+                        </button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Success Metrics</h4>
+                                <p class="text-sm text-gray-600">Quantified achievements report</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-download mr-2"></i>Download PDF
+                        </button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-lightbulb text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Innovation Framework</h4>
+                                <p class="text-sm text-gray-600">Agile marketing methodology</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-download mr-2"></i>Download PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50 theme-transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Professional Recognition</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Insights from colleagues and industry leaders on collaborative achievements and impact.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- @MAP: testimonials.map(testimonial => ( -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4" data-mock="true">
+                        "P.K.'s strategic approach to product launches is unmatched. His ability to translate complex medical technology into compelling market narratives drove exceptional adoption rates."
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Professional medical executive headshot -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=50&h=50" alt="Medical Executive" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <div class="font-semibold text-gray-900" data-mock="true">Dr. Sarah Johnson</div>
+                            <div class="text-sm text-gray-600" data-mock="true">VP Clinical Affairs, Cook Medical</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4" data-mock="true">
+                        "The Zenith Fenestrated program's success wouldn't have been possible without P.K.'s innovative training approach and meticulous execution. A true marketing leader."
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Senior business executive in professional attire -->
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=50&h=50" alt="Business Executive" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <div class="font-semibold text-gray-900" data-mock="true">Michael Chen</div>
+                            <div class="text-sm text-gray-600" data-mock="true">Global Sales Director, Cook Medical</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4" data-mock="true">
+                        "P.K. brought Silicon Valley agility to our traditional medical device company. His design sprint methodology transformed how we approach product launches."
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Professional woman executive in business setting -->
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=50&h=50" alt="Female Executive" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <div class="font-semibold text-gray-900" data-mock="true">Lisa Rodriguez</div>
+                            <div class="text-sm text-gray-600" data-mock="true">VP Innovation, Cook Medical</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 theme-transition" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Let's Connect</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ready to discuss how strategic marketing expertise can drive your medical device innovation forward?
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
+                    <form class="space-y-6" data-implementation="Should integrate with contact form service">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-professional-500 focus:border-transparent" placeholder="John" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-professional-500 focus:border-transparent" placeholder="Doe" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-professional-500 focus:border-transparent" placeholder="john@company.com" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-professional-500 focus:border-transparent" placeholder="Medical Device Company" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-professional-500 focus:border-transparent" placeholder="Tell me about your project or opportunity..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-professional-600 text-white px-6 py-3 rounded-lg hover:bg-professional-700 transition-colors font-medium">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-professional-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-professional-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900">Email</div>
+                                    <div class="text-gray-600" data-bind="user.email">pkoduri@gmail.com</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-professional-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-professional-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900">Phone</div>
+                                    <div class="text-gray-600" data-bind="user.phone">(812) 606-0365</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-professional-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-professional-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900">Location</div>
+                                    <div class="text-gray-600" data-bind="user.location">Bloomington, IN</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">Connect on Social</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-800 text-white rounded-lg flex items-center justify-center hover:bg-gray-900 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-blue-400 text-white rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">Quick Facts</h4>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Response Time:</span>
+                                <span class="font-medium text-gray-900">Within 24 hours</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Availability:</span>
+                                <span class="font-medium text-gray-900">Immediate</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Preferred Contact:</span>
+                                <span class="font-medium text-gray-900">Email</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">P.K. Koduri</h3>
+                    <p class="text-gray-400 mb-4">
+                        Medical Device Marketing Leader with 15+ years of experience driving breakthrough technologies from innovation to global adoption.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#achievements" class="hover:text-white transition-colors">Achievements</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Resume Download</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Success Metrics</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Innovation Framework</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 P.K. Koduri. All rights reserved. | Designed for professional marketing excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<!-- @END_COMPONENT: MainPortfolio -->
+
+<!-- Back to Theme Selector Button (Fixed) -->
+<button id="backToThemes" class="hidden fixed top-20 left-4 bg-white shadow-lg border border-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors z-40">
+    <i class="fas fa-arrow-left mr-2"></i>Back to Themes
+</button>
+
+<script>
+// TODO: Implement business logic, API calls, or state management
+(function() {
+    'use strict';
+    
+    // DOM Elements
+    const themeSelector = document.getElementById('themeSelector');
+    const mainPortfolio = document.getElementById('mainPortfolio');
+    const professionalChoice = document.getElementById('professionalChoice');
+    const disruptorChoice = document.getElementById('disruptorChoice');
+    const skipThemeSelector = document.getElementById('skipThemeSelector');
+    const backToThemes = document.getElementById('backToThemes');
+    const themeToggle = document.getElementById('themeToggle');
+    const mainBody = document.getElementById('mainBody');
+    const navigation = document.getElementById('navigation');
+    const heroSection = document.getElementById('heroSection');
+
+    // Theme configurations
+    const themes = {
+        professional: {
+            bodyClass: 'bg-white',
+            navClass: 'bg-white/95 border-gray-200',
+            heroClass: 'bg-gradient-to-br from-professional-50 to-white',
+            heroBadge: 'Medical Device Marketing Expert',
+            heroTitle: 'Transforming Medical Technology into Patient Success',
+            heroSubtitle: '15+ years driving breakthrough medical device adoption, from FDA-approved innovations to global market expansion.',
+            primary: 'professional-600',
+            accent: 'professional-100'
+        },
+        disruptor: {
+            bodyClass: 'bg-gray-900',
+            navClass: 'bg-gray-900/95 border-gray-700',
+            heroClass: 'bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900',
+            heroBadge: 'Innovation Catalyst & Change Agent',
+            heroTitle: 'Breaking Through Bureaucracy to Drive Medical Innovation',
+            heroSubtitle: 'Accelerating medical device companies from 90-day cycles to 5-day sprints while maintaining clinical excellence.',
+            primary: 'disruptor-600',
+            accent: 'disruptor-100'
+        }
+    };
+
+    let currentTheme = 'professional';
+
+    // Theme Application Functions
+    function applyTheme(themeName) {
+        const theme = themes[themeName];
+        if (!theme) return;
+
+        // Update body classes
+        mainBody.className = `font-inter antialiased theme-transition ${theme.bodyClass}`;
+        
+        // Update navigation
+        navigation.className = `fixed top-0 w-full z-50 ${theme.navClass} backdrop-blur-sm border-b theme-transition`;
+        
+        // Update hero section
+        heroSection.className = `pt-16 pb-20 theme-transition ${theme.heroClass}`;
+        
+        // Update hero content
+        document.getElementById('heroBadge').textContent = theme.heroBadge;
+        document.getElementById('heroTitle').textContent = theme.heroTitle;
+        document.getElementById('heroSubtitle').textContent = theme.heroSubtitle;
+
+        // Update text colors for dark theme
+        if (themeName === 'disruptor') {
+            const textElements = document.querySelectorAll('#mainPortfolio h1, #mainPortfolio h2, #mainPortfolio h3, #mainPortfolio p');
+            textElements.forEach(el => {
+                if (el.closest('.bg-white') || el.closest('.bg-gray-50')) {
+                    // Skip elements in white/light backgrounds
+                    return;
+                }
+                el.classList.add('text-white');
+            });
+            
+            // Update sections that should be dark
+            const sections = document.querySelectorAll('#mainPortfolio section:not(.bg-white):not(.bg-gray-50)');
+            sections.forEach(section => {
+                section.classList.add('bg-gray-900', 'text-white');
+            });
+        } else {
+            // Remove dark theme classes
+            const textElements = document.querySelectorAll('#mainPortfolio .text-white');
+            textElements.forEach(el => {
+                el.classList.remove('text-white');
+            });
+            
+            const darkSections = document.querySelectorAll('#mainPortfolio .bg-gray-900');
+            darkSections.forEach(section => {
+                section.classList.remove('bg-gray-900');
+            });
+        }
+
+        currentTheme = themeName;
+    }
+
+    // Event Listeners
+    professionalChoice.addEventListener('click', function() {
+        applyTheme('professional');
+        showMainPortfolio();
+    });
+
+    disruptorChoice.addEventListener('click', function() {
+        applyTheme('disruptor');
+        showMainPortfolio();
+    });
+
+    skipThemeSelector.addEventListener('click', function() {
+        applyTheme('professional'); // Default to professional
+        showMainPortfolio();
+    });
+
+    backToThemes.addEventListener('click', function() {
+        showThemeSelector();
+    });
+
+    themeToggle.addEventListener('click', function() {
+        const newTheme = currentTheme === 'professional' ? 'disruptor' : 'professional';
+        applyTheme(newTheme);
+    });
+
+    // Navigation Functions
+    function showMainPortfolio() {
+        themeSelector.classList.add('hidden');
+        mainPortfolio.classList.remove('hidden');
+        backToThemes.classList.remove('hidden');
+        
+        // Trigger animations
+        setTimeout(() => {
+            const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-up');
+            animatedElements.forEach(el => {
+                el.style.animation = 'none';
+                el.offsetHeight; // Trigger reflow
+                el.style.animation = null;
+            });
+        }, 100);
+    }
+
+    function showThemeSelector() {
+        themeSelector.classList.remove('hidden');
+        mainPortfolio.classList.add('hidden');
+        backToThemes.classList.add('hidden');
+        
+        // Reset to default theme for selector
+        mainBody.className = 'font-inter antialiased theme-transition';
+        navigation.className = 'fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 theme-transition';
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Scroll-based animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for scroll animations
+    document.querySelectorAll('.card-hover').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+
+    // Initialize
+    applyTheme('professional');
+})();
+</script>
+
+</body>
+</html>

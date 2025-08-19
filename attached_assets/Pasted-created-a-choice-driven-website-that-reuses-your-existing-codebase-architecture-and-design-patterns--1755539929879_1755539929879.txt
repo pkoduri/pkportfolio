@@ -1,0 +1,38 @@
+created a choice-driven website that reuses your existing codebase architecture and design patterns. Here's what I've built:
+Key Features Implemented:
+Landing Page:
+
+Clean choice interface with two compelling cards using your existing design system
+Reused your color palette (blue for professional, red/pink for disruptor)
+Maintained your typography hierarchy and spacing patterns
+Used your proven card hover effects and animations
+
+Professional Journey (Blue Theme):
+
+Patient-focused messaging: "I believe that breakthrough medical technologies should reach every patient who needs them"
+Clean, traditional approach emphasizing clinical success rates and proven methodology
+Reused your hero section layout, badge styling, and stats grid
+Focuses on the 95.5% success rate, $250M+ portfolio, and global expansion
+
+Disruptor Journey (Dark Theme):
+
+Organizational change focus: "Medical device companies lose their innovation edge one bureaucratic layer at a time"
+Dark gradient background with vibrant pink accents
+Emphasizes speed (5 days vs 90-day cycles), silo-breaking, and competitive advantage
+Uses edgier language around "cutting through complexity" and "bureaucracy killing"
+
+Design System Reuse:
+
+Maintained your exact header structure and navigation styling
+Reused your button designs, typography scales, and spacing patterns
+Kept your hero section layout with badges, titles, subtitles, and stats grids
+Used your responsive breakpoints and mobile adaptations
+
+Interactive Elements:
+
+Smooth transitions between modes with your existing animation patterns
+Fixed back button for easy navigation between journeys
+Maintains your scroll behavior and link interactions
+Cards use your proven hover effects with transform and shadow changes
+
+The website allows visitors to self-select into the narrative that resonates with their challenges while maintaining consistency with your established design language and user experience patterns. Each version presents the same achievements through different lenses - clinical excellence vs organizational transformation.
